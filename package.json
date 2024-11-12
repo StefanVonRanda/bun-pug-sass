@@ -13,7 +13,7 @@
     "sass-build": "sass --no-source-map --style=compressed src/css:dist/css",
     "pug-dev": "pug -w ./src -o ./dist -P",
     "pug-build": "pug ./src -o ./dist -P",
-    "dev": "concurrently --kill-others \"bun run pug-dev\" \"bun run sass-dev\"",
-    "build": "bun run pug-build && bun run sass-build"
+    "dev": "concurrently --kill-others \"bun run pug-dev\" \"bun run sass-dev\" \"bun --watch run index.js\"",
+    "build": "bun run pug-build && bun run sass-build && rm -rf dist/public && cp -r src/public dist/public"
   }
 }
