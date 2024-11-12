@@ -1,15 +1,23 @@
 # pug-sass
 
+A simple starter template for building static sites using **pug** & **sass** running under **bun**
+
 To install dependencies:
 
 ```bash
-bun install
+bun i
 ```
 
-To run:
+To watch:
 
 ```bash
-bun run index.js
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.1.20. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+To build:
+```bash
+bun run build
+```
+
+## TO DO
+- Spin up a HMR webserver when running `dev`
