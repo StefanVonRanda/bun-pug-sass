@@ -21,3 +21,4 @@ bun run build
 
 ## TO DO
 - Spin up a HMR webserver when running `dev`
+- Copy over js and other assets on `build` & `dev`
