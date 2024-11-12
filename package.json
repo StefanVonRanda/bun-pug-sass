@@ -1,0 +1,19 @@
+{
+  "name": "pug-sass",
+  "module": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^9.1.0",
+    "pug": "^3.0.3",
+    "sass": "^1.80.6"
+  },
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded src/css:dist/css",
+    "sass-build": "sass --no-source-map --style=compressed src/css:dist/css",
+    "pug-dev": "pug -w ./src -o ./dist -P",
+    "pug-build": "pug ./src -o ./dist -P",
+    "dev": "concurrently --kill-others \"bun run pug-dev\" \"bun run sass-dev\"",
+    "build": "bun run pug-build && bun run sass-build"
+  }
+}
