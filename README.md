@@ -1,6 +1,7 @@
 # pug-sass
 
 A simple starter template for building static sites using **pug** & **sass** running under **bun**
+No build scripts or frameworks, just good old `Concurrent`, for running the dev server and watching for file changes.
 
 To install dependencies:
 
@@ -20,5 +21,4 @@ bun run build
 ```
 
 ## TO DO
-- Spin up a HMR webserver when running `dev`
-- Copy over js and other assets on `build` & `dev`
+- Hot-reloading the dev server & browser tab when files change
